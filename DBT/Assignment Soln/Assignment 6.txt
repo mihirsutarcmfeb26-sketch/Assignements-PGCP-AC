@@ -1,0 +1,154 @@
+mysql> use khargar;
+Database changed
+mysql> select * from orders;
++------+------+------------+------+------+
+| Onum | AMT  | ODATE      | Cnum | Snum |
++------+------+------------+------+------+
+| 3001 | 18   | 1990-10-03 | 2008 | 1007 |
+| 3003 | 767  | 1990-10-03 | 2001 | 1001 |
+| 3002 | 1900 | 1990-10-03 | 2007 | 1004 |
+| 3005 | 5160 | 1990-10-03 | 2003 | 1002 |
+| 3006 | 1098 | 1990-10-03 | 2008 | 1007 |
+| 3009 | 1713 | 1990-10-04 | 2002 | 1003 |
+| 3008 | 4723 | 1990-10-05 | 2006 | 1001 |
+| 3010 | 1309 | 1990-10-06 | 2004 | 1002 |
+| 3011 | 9891 | 1990-10-06 | 2006 | 1001 |
++------+------+------------+------+------+
+9 rows in set (0.00 sec)
+
+mysql> select * from orders
+    -> where odate = '1990-10-03';
++------+------+------------+------+------+
+| Onum | AMT  | ODATE      | Cnum | Snum |
++------+------+------------+------+------+
+| 3001 | 18   | 1990-10-03 | 2008 | 1007 |
+| 3003 | 767  | 1990-10-03 | 2001 | 1001 |
+| 3002 | 1900 | 1990-10-03 | 2007 | 1004 |
+| 3005 | 5160 | 1990-10-03 | 2003 | 1002 |
+| 3006 | 1098 | 1990-10-03 | 2008 | 1007 |
++------+------+------------+------+------+
+5 rows in set (0.00 sec)
+
+mysql> select * from orders
+    -> where odate = '1990-10-04';
++------+------+------------+------+------+
+| Onum | AMT  | ODATE      | Cnum | Snum |
++------+------+------------+------+------+
+| 3009 | 1713 | 1990-10-04 | 2002 | 1003 |
++------+------+------------+------+------+
+1 row in set (0.00 sec)
+
+mysql> select * from salespeople;
++------+----------+-----------+------+
+| Snum | Sname    | City      | Comm |
++------+----------+-----------+------+
+| 1001 | Peel     | London    | 0.12 |
+| 1002 | Serres   | San Jose  | 0.13 |
+| 1004 | Motik    | London    | 0.11 |
+| 1007 | Rifkin   | Barcelona | 0.15 |
+| 1003 | Axelford | New York  | 0.10 |
++------+----------+-----------+------+
+5 rows in set (0.00 sec)
+
+mysql> select * from customers;
++------+----------+----------+--------+------+
+| Cnum | Cname    | City     | Rating | Snum |
++------+----------+----------+--------+------+
+| 2001 | Hoffman  | London   |    100 | 1001 |
+| 2002 | Giovanni | Rome     |    200 | 1003 |
+| 2003 | Liu      | San Jose |    200 | 1002 |
+| 2004 | Grass    | Berlin   |    300 | 1002 |
+| 2006 | Clemens  | London   |    100 | 1001 |
+| 2008 | Cisneros | San Jose |    300 | 1007 |
+| 2007 | Pereira  | Rome     |    100 | 1004 |
++------+----------+----------+--------+------+
+7 rows in set (0.00 sec)
+
+mysql> select * from cudtomers
+    -> where cname >= 'A' and <= 'C';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<= 'C'' at line 2
+mysql> select * from customers
+    -> where cname  like '[A-G]%';
+Empty set (0.00 sec)
+
+mysql> select * from customers
+    -> where cname between 'A' and 'Gzz';
++------+----------+----------+--------+------+
+| Cnum | Cname    | City     | Rating | Snum |
++------+----------+----------+--------+------+
+| 2002 | Giovanni | Rome     |    200 | 1003 |
+| 2004 | Grass    | Berlin   |    300 | 1002 |
+| 2006 | Clemens  | London   |    100 | 1001 |
+| 2008 | Cisneros | San Jose |    300 | 1007 |
++------+----------+----------+--------+------+
+4 rows in set (0.00 sec)
+
+mysql> select * from customers
+    -> where cname between 'A' and 'Gzz'
+    -> order by cname ;
++------+----------+----------+--------+------+
+| Cnum | Cname    | City     | Rating | Snum |
++------+----------+----------+--------+------+
+| 2008 | Cisneros | San Jose |    300 | 1007 |
+| 2006 | Clemens  | London   |    100 | 1001 |
+| 2002 | Giovanni | Rome     |    200 | 1003 |
+| 2004 | Grass    | Berlin   |    300 | 1002 |
++------+----------+----------+--------+------+
+4 rows in set (0.01 sec)
+
+mysql> select * from customers
+    -> where cname like '%c';
+Empty set (0.00 sec)
+
+mysql> select * from customers
+    -> where cname 'Czz'
+    -> order by cname ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''Czz'
+order by cname' at line 2
+mysql> SELECT *
+    -> FROM customers
+    -> WHERE cname LIKE 'C%';
++------+----------+----------+--------+------+
+| Cnum | Cname    | City     | Rating | Snum |
++------+----------+----------+--------+------+
+| 2006 | Clemens  | London   |    100 | 1001 |
+| 2008 | Cisneros | San Jose |    300 | 1007 |
++------+----------+----------+--------+------+
+2 rows in set (0.00 sec)
+
+mysql> select * from orders;
++------+------+------------+------+------+
+| Onum | AMT  | ODATE      | Cnum | Snum |
++------+------+------------+------+------+
+| 3001 | 18   | 1990-10-03 | 2008 | 1007 |
+| 3003 | 767  | 1990-10-03 | 2001 | 1001 |
+| 3002 | 1900 | 1990-10-03 | 2007 | 1004 |
+| 3005 | 5160 | 1990-10-03 | 2003 | 1002 |
+| 3006 | 1098 | 1990-10-03 | 2008 | 1007 |
+| 3009 | 1713 | 1990-10-04 | 2002 | 1003 |
+| 3008 | 4723 | 1990-10-05 | 2006 | 1001 |
+| 3010 | 1309 | 1990-10-06 | 2004 | 1002 |
+| 3011 | 9891 | 1990-10-06 | 2006 | 1001 |
++------+------+------------+------+------+
+9 rows in set (0.00 sec)
+
+mysql> select * from orders
+    -> where not (amt )
+    -> \c
+mysql> select * from orders
+    -> where amt is not null
+    -> and amt <> 0;
++------+------+------------+------+------+
+| Onum | AMT  | ODATE      | Cnum | Snum |
++------+------+------------+------+------+
+| 3001 | 18   | 1990-10-03 | 2008 | 1007 |
+| 3003 | 767  | 1990-10-03 | 2001 | 1001 |
+| 3002 | 1900 | 1990-10-03 | 2007 | 1004 |
+| 3005 | 5160 | 1990-10-03 | 2003 | 1002 |
+| 3006 | 1098 | 1990-10-03 | 2008 | 1007 |
+| 3009 | 1713 | 1990-10-04 | 2002 | 1003 |
+| 3008 | 4723 | 1990-10-05 | 2006 | 1001 |
+| 3010 | 1309 | 1990-10-06 | 2004 | 1002 |
+| 3011 | 9891 | 1990-10-06 | 2006 | 1001 |
++------+------+------------+------+------+
+9 rows in set (0.00 sec)

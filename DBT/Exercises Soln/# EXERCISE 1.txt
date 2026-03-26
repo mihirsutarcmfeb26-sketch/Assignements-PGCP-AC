@@ -1,0 +1,89 @@
+           # EXERCISE 1
+
+
+    Q 1> .mysql> insert into SEMP values
+    -> ('E101','Rahul',.25,'D1','H101'),
+    -> ('E102','Amit',.30,'D2','H102'),
+    -> ('E103','Sneha',.28,'D1','H101'),
+    -> ('E104','Karan',.32,'D3','H103'),
+    -> ('E105','Neha',.27,'D2','H102');
+Query OK, 5 rows affected (0.05 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> Select * from semp;
++-------+---------+-------+--------+----------+
+| EmpNO | EmpName | Basic | DeptNo | Depthead |
++-------+---------+-------+--------+----------+
+| E101  | Rahul   | 0.250 | D1     | H101     |
+| E102  | Amit    | 0.300 | D2     | H102     |
+| E103  | Sneha   | 0.280 | D1     | H101     |
+| E104  | Karan   | 0.320 | D3     | H103     |
+| E105  | Neha    | 0.270 | D2     | H102     |
++-------+---------+-------+--------+----------+
+5 rows in set (0.04 sec)
+
+
+
+
+
+
+Q2 ->  create table SDEPT ( DeptNo char(2), DeptName char(15));
+Query OK, 0 rows affected (0.08 sec)
+
+
+mysql> insert into  SDEPT values
+    -> ('E1', 'HUMAN RESOURCE'),
+    -> ('E2', 'TECH LEAD');
+Query OK, 2 rows affected (0.06 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> Select * from SDEPT;
++--------+----------------+
+| DeptNo | DeptName       |
++--------+----------------+
+| E1     | HUMAN RESOURCE |
+| E2     | TECH LEAD      |
++--------+----------------+
+2 rows in set (0.00 sec)
+
+Q3 ->
+mysql> INSERT INTO SDEPT VALUES ('10','Development');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into SDEPT values ('20', 'Training');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from SDEPT;
++--------+----------------+
+| DeptNo | DeptName       |
++--------+----------------+
+| E1     | HUMAN RESOURCE |
+| E2     | TECH LEAD      |
+| 10     | Development    |
+| 20     | Training       |
++--------+---------------
+
+Q4 ->
+mysql> insert into SEMP values
+    -> ('0001', 'SUNIL', .60, '10', 'H103'),
+    -> ('0002', 'HIREN', .80, '20', 'H103'),
+    -> (0003, 'ALI', .40, '10', 'H104'),
+    -> (0004, 'GEORGE', .60, '20' ,'H109');
+Query OK, 4 rows affected (0.05 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> Select * from SEMP;
++-------+---------+-------+--------+----------+
+| EmpNO | EmpName | Basic | DeptNo | Depthead |
++-------+---------+-------+--------+----------+
+| E101  | Rahul   | 0.250 | D1     | H101     |
+| E102  | Amit    | 0.300 | D2     | H102     |
+| E103  | Sneha   | 0.280 | D1     | H101     |
+| E104  | Karan   | 0.320 | D3     | H103     |
+| E105  | Neha    | 0.270 | D2     | H102     |
+| 0001  | SUNIL   | 0.600 | 10     | H103     |
+| 0002  | HIREN   | 0.800 | 20     | H103     |
+| 3     | ALI     | 0.400 | 10     | H104     |
+| 4     | GEORGE  | 0.600 | 20     | H109     |
++-------+---------+-------+--------+----------+
+9 rows in set (0.00 sec)
