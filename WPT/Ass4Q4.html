@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercise 4</title>
+</head>
+<body>
+
+<script>
+function fetchData(url, callback)
+{
+    setTimeout(function()
+    {
+        let error = false;
+
+        if(error)
+        {
+            callback("Network Error!", null);
+        }
+        else
+        {
+            callback(null, "Response from " + url);
+        }
+
+    }, 2000);
+}
+
+fetchData("www.google.com", function(err, response)
+{
+    if(err)
+    {
+        console.log(err);
+    }
+    else
+    {
+        console.log(response);
+    }
+});
+</script>
+
+</body>
+</html>

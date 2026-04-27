@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercise 1</title>
+</head>
+<body>
+
+<script>
+function processData(str, callback)
+{
+    let result = callback(str);
+    console.log(result);
+}
+
+function toUpperCase(text)
+{
+    return text.toUpperCase();
+}
+
+processData("hello cdac", toUpperCase);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercise 5</title>
+</head>
+<body>
+
+<script>
+function fetchData(url, callback)
+{
+    setTimeout(function()
+    {
+        callback(null, "Data from " + url);
+    }, 2000);
+}
+
+function processData(data, callback)
+{
+    let result = data.toUpperCase();
+    callback(result);
+}
+
+fetchData("www.cdac.in", function(err, response)
+{
+    if(err)
+    {
+        console.log(err);
+    }
+    else
+    {
+        processData(response, function(finalData)
+        {
+            console.log("Processed Data: " + finalData);
+        });
+    }
+});
+</script>
+
+</body>
+</html>

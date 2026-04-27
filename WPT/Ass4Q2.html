@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercise 2</title>
+</head>
+<body>
+
+<script>
+function forEachElement(arr, callback)
+{
+    for(let i = 0; i < arr.length; i++)
+    {
+        callback(arr[i], i);
+    }
+}
+
+let numbers = [10, 20, 30, 40];
+
+forEachElement(numbers, function(value, index)
+{
+    console.log("Index: " + index + " Value: " + (value * 2));
+});
+</script>
+
+</body>
+</html>
