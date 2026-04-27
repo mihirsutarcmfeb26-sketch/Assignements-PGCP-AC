@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Values</title>
+</head>
+<body>
+
+<form onsubmit="showData(); return false;">
+First Name:
+<input type="text" id="fname"><br><br>
+
+Last Name:
+<input type="text" id="lname"><br><br>
+
+Contact No:
+<input type="text" id="contact"><br><br>
+
+Email ID:
+<input type="email" id="email"><br><br>
+
+<input type="submit" value="Submit">
+</form>
+
+<h3 id="result"></h3>
+
+<script>
+function showData()
+{
+    let fn = document.getElementById("fname").value;
+    let ln = document.getElementById("lname").value;
+    let c = document.getElementById("contact").value;
+    let e = document.getElementById("email").value;
+
+    document.getElementById("result").innerHTML =
+    "First Name: " + fn + "<br>" +
+    "Last Name: " + ln + "<br>" +
+    "Contact: " + c + "<br>" +
+    "Email: " + e;
+}
+</script>
+
+</body>
+</html>

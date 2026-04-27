@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Paragraph Style Change</title>
+</head>
+<body>
+
+<p id="para">
+It is rightly said that being disciplined is essential in life.
+When a person leads a disciplined life, they set an easy path to success.
+</p>
+
+<button onclick="changeStyle()">Change Style</button>
+
+<script>
+function changeStyle()
+{
+    let p = document.getElementById("para");
+
+    p.style.color = "blue";
+    p.style.fontSize = "25px";
+    p.style.fontFamily = "Arial";
+    p.style.fontWeight = "bold";
+}
+</script>
+
+</body>
+</html>

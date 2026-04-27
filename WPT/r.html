@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration Form</title>
+
+<style>
+body{
+    margin:0;
+    padding:20px;
+    background:#eeeeee;
+    font-family:Arial, sans-serif;
+}
+
+h1{
+    text-align:center;
+    color:#5a47c7;
+    text-decoration:underline;
+    margin-bottom:25px;
+}
+
+.form-box{
+    width:900px;
+    margin:auto;
+    background:#6657d9;
+    padding:25px;
+    color:white;
+    border:2px solid #4a3cb5;
+}
+
+table{
+    width:100%;
+    border-spacing:12px;
+}
+
+td{
+    vertical-align:top;
+    font-size:14px;
+}
+
+label{
+    font-weight:bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select{
+    padding:5px;
+    width:220px;
+}
+
+textarea{
+    width:320px;
+    height:90px;
+}
+
+.small{
+    width:80px;
+}
+
+.medium{
+    width:120px;
+}
+
+.note{
+    font-size:13px;
+}
+
+.qual-table{
+    width:100%;
+    border-spacing:8px;
+}
+
+.qual-table input{
+    width:150px;
+}
+
+button{
+    padding:6px 14px;
+    margin:8px;
+    cursor:pointer;
+}
+
+.center{
+    text-align:center;
+}
+
+input[type="radio"],
+input[type="checkbox"]{
+    margin-right:5px;
+}
+</style>
+
+</head>
+<body>
+
+<h1>STUDENT REGISTRATION FORM</h1>
+
+<div class="form-box">
+
+<form>
+
+<table>
+
+<tr>
+<td><label>FIRST NAME</label></td>
+<td>
+<input type="text">
+<span class="note">(max 30 characters a-z and A-Z)</span>
+</td>
+</tr>
+
+<tr>
+<td><label>LAST NAME</label></td>
+<td>
+<input type="text">
+<span class="note">(max 30 characters a-z and A-Z)</span>
+</td>
+</tr>
+
+<tr>
+<td><label>DATE OF BIRTH</label></td>
+<td>
+<select class="small">
+<option>Day</option>
+</select>
+
+<select class="small">
+<option>Month</option>
+</select>
+
+<select class="small">
+<option>Year</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td><label>EMAIL ID</label></td>
+<td><input type="email"></td>
+</tr>
+
+<tr>
+<td><label>MOBILE NUMBER</label></td>
+<td>
+<input type="text">
+<span class="note">(10 digit number)</span>
+</td>
+</tr>
+
+<tr>
+<td><label>GENDER</label></td>
+<td>
+<input type="radio" name="gender">Male
+<input type="radio" name="gender">Female
+</td>
+</tr>
+
+<tr>
+<td><label>ADDRESS</label></td>
+<td><textarea></textarea></td>
+</tr>
+
+<tr>
+<td><label>CITY</label></td>
+<td>
+<input type="text">
+<span class="note">(max 30 characters a-z and A-Z)</span>
+</td>
+</tr>
+
+<tr>
+<td><label>PIN CODE</label></td>
+<td>
+<input type="text">
+<span class="note">(6 digit number)</span>
+</td>
+</tr>
+
+<tr>
+<td><label>STATE</label></td>
+<td>
+<input type="text">
+<span class="note">(max 30 characters a-z and A-Z)</span>
+</td>
+</tr>
+
+<tr>
+<td><label>COUNTRY</label></td>
+<td><input type="text" value="India"></td>
+</tr>
+
+<tr>
+<td><label>HOBBIES</label></td>
+<td>
+<input type="checkbox">Drawing
+<input type="checkbox">Singing
+<input type="checkbox">Dancing
+<input type="checkbox">Sketching
+<br><br>
+Others <input type="checkbox">
+<input type="text" class="medium">
+</td>
+</tr>
+
+<tr>
+<td><label>QUALIFICATION</label></td>
+
+<td>
+
+<table class="qual-table">
+
+<tr>
+<th>Sl.No.</th>
+<th>Examination</th>
+<th>Board</th>
+<th>Percentage</th>
+<th>Year of Passing</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Class X</td>
+<td><input type="text"></td>
+<td><input type="text"></td>
+<td><input type="text"></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Class XII</td>
+<td><input type="text"></td>
+<td><input type="text"></td>
+<td><input type="text"></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Graduation</td>
+<td><input type="text"></td>
+<td><input type="text"></td>
+<td><input type="text"></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Masters</td>
+<td><input type="text"></td>
+<td><input type="text"></td>
+<td><input type="text"></td>
+</tr>
+
+</table>
+
+</td>
+</tr>
+
+<tr>
+<td><label>COURSES APPLIED FOR</label></td>
+<td>
+<input type="radio" name="course">BCA
+<input type="radio" name="course">B.Com
+<input type="radio" name="course">B.Sc
+<input type="radio" name="course">B.A
+</td>
+</tr>
+
+<tr>
+<td colspan="2" class="center">
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+</td>
+</tr>
+
+</table>
+
+</form>
+
+</div>
+
+</body>
+</html>
