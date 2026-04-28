@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Mihir's Creative Website</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <span>✨</span> Mihir
+        </a>
+        <button class="menu-icon" id="menuBtn" aria-label="Toggle menu">
+            ☰
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Account ▼</a>
+                <div class="dropdown-content">
+                    <a href="signin.html">Sign In</a>
+                    <a href="signup.html">Sign Up</a>
+                </div>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="form-container">
+            <h2 style="text-align: center; margin-bottom: 20px;">Create an Account</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password" required>
+                </div>
+                <div style="text-align: center; margin-top: 25px;">
+                    <button type="submit" class="btn" style="width: 100%;">
+                        <span>Sign Up</span>
+                        <span class="symbol">✔</span>
+                    </button>
+                </div>
+                <p style="text-align: center; margin-top: 15px;">
+                    Already have an account? <a href="signin.html" style="color: #ffcc00;">Sign In</a>
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Mihir's Creative Website. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a> | 
+                <a href="#">Twitter</a> | 
+                <a href="#">Instagram</a>
+            </div>
+            <p>Contact: mihir@example.com | +1 234 567 890</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

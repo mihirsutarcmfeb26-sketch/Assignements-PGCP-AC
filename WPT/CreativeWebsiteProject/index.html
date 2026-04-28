@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Mihir's Creative Website</title>
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <span>✨</span> Mihir
+        </a>
+        <button class="menu-icon" id="menuBtn" aria-label="Toggle menu">
+            ☰
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Account ▼</a>
+                <div class="dropdown-content">
+                    <a href="signin.html">Sign In</a>
+                    <a href="signup.html">Sign Up</a>
+                </div>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Scrolling Text -->
+    <div class="scrolling-container">
+        <div class="scrolling-text">
+            Welcome to our creative website project. Experience the beautiful design and interactive features. ✨
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="card" style="text-align: center; padding: 50px 20px;">
+            <h1>Welcome to Mihir's Creative Project</h1>
+            <p>This simple website was created to showcase web development skills.</p>
+            <p>Explore the pages to see the design, layout, and interactive elements implemented using HTML and CSS.</p>
+            
+            <a href="about.html" class="btn" style="margin-top: 20px;">
+                <span>Learn More About Us</span>
+                <span class="symbol">→</span>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Mihir's Creative Website. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a> | 
+                <a href="#">Twitter</a> | 
+                <a href="#">Instagram</a>
+            </div>
+            <p>Contact: mihir@example.com | +1 234 567 890</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for mobile menu toggling
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

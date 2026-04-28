@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Mihir's Creative Website</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <span>✨</span> Mihir
+        </a>
+        <button class="menu-icon" id="menuBtn" aria-label="Toggle menu">
+            ☰
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Account ▼</a>
+                <div class="dropdown-content">
+                    <a href="signin.html">Sign In</a>
+                    <a href="signup.html">Sign Up</a>
+                </div>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="card">
+            <h1>About Us</h1>
+            <h2>About The Project</h2>
+            <p>This website was created by Mihir to demonstrate a creative and simple web layout. It serves as a practical implementation of various HTML and CSS concepts, focusing on clean design and functionality.</p>
+            
+            <h3>Our Mission</h3>
+            <p>Our mission is to demonstrate a cohesive design using HTML and CSS, ensuring responsiveness, interactivity, and clean layouts.</p>
+            
+            <a href="contact.html" class="btn" style="margin-top: 15px;">
+                <span>Get in Touch</span>
+                <span class="symbol">✉</span>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Mihir's Creative Website. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a> | 
+                <a href="#">Twitter</a> | 
+                <a href="#">Instagram</a>
+            </div>
+            <p>Contact: mihir@example.com | +1 234 567 890</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

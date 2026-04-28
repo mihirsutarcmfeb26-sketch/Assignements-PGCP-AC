@@ -1,0 +1,333 @@
+/* Reset and Base Styles - Lamborghini Theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #0a0a0a;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('lamborghini.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #e0e0e0; /* Light text */
+    padding-top: 60px; /* Space for fixed navbar */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Typography */
+h1, h2, h3 {
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-transform: uppercase; /* Aggressive, sleek look */
+    letter-spacing: 1px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #000000;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+    border-bottom: 2px solid #ffcc00; /* Lamborghini Yellow */
+    box-shadow: 0 4px 10px rgba(255, 204, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffcc00;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 2px;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    margin: 0;
+}
+
+.nav-links li {
+    height: 100%;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+    background-color: #1a1a1a;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1a1a1a;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    border-top: 2px solid #ffcc00;
+    top: 60px;
+    left: 0;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    height: auto;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+    color: #ffcc00;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Menu Icon (Hamburger) */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #ffcc00;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: #aaa;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+    border-top: 1px solid #333;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* Buttons with Hover Effects */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffcc00;
+    color: #000;
+    padding: 12px 24px;
+    text-decoration: none;
+    border: 2px solid #ffcc00;
+    border-radius: 0; /* Sharp edges for a sleek look */
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 1px;
+}
+
+.btn .symbol {
+    display: none;
+    margin-left: 8px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: transparent; /* Invert effect */
+    color: #ffcc00;
+}
+
+.btn:hover .symbol {
+    display: inline;
+}
+
+/* Forms */
+.form-container {
+    background-color: rgba(17, 17, 17, 0.85);
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 204, 0, 0.3);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+.form-container h2 {
+    color: #ffcc00;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ccc;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: white;
+    border-radius: 0;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #ffcc00;
+}
+
+/* Scrolling Text */
+.scrolling-container {
+    background-color: #111;
+    color: #ffcc00;
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-bottom: 1px solid #333;
+}
+
+.scrolling-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll 15s linear infinite;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@keyframes scroll {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+/* Cards (for Home/About pages) */
+.card {
+    background: rgba(17, 17, 17, 0.85);
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 204, 0, 0.2);
+    border-left: 4px solid #ffcc00;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        height: auto;
+        border-bottom: 2px solid #ffcc00;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        justify-content: center;
+        border-bottom: 1px solid #222;
+    }
+    
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        background-color: #111;
+        border-top: none;
+    }
+    
+    .dropdown-content a {
+        padding-left: 30px;
+        border-bottom: 1px solid #222;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
